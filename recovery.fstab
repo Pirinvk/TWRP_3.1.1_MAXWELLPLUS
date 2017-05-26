@@ -1,0 +1,7 @@
+/boot                mtd          boot                                            flags=backup=0
+/recovery            mtd          recovery                                        flags=backup=0
+/cache               ext4         /dev/block/mtd/by-name/cache
+/system              ext4         /dev/block/mtd/by-name/system
+/data                ext4         /dev/block/mtd/by-name/userdata                 flags=encryptable=/dev/block/mtd/by-name/metadata
+/external_sd         vfat         /dev/block/mmcblk0p1 /dev/block/mmcblk0         flags=display="External SD";storage;wipeingui;removable
+/usb-otg             vfat         /dev/block/sda1 /dev/block/sda                  flags=display="USB OTG";storage;wipeingui;removable
